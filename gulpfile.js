@@ -24,7 +24,13 @@ gulp.task('html', function(done){
     done();
 });
 
-gulp.task('build', gulp.series('html', 'css', 'js'));
+gulp.task('images', function(done) {
+    gulp.src(src + 'images/*').pipe(gulp.dest(build + "/img"));
+    browserSync.reload();
+    done();
+})
+
+gulp.task('build', gulp.series('html', 'css', 'js', 'images'));
 
 gulp.task('run', function(done){
     browserSync.init({

@@ -27,7 +27,8 @@
   "homepage": "https://github.com/JAKESNAKE523/Robotics2019#readme",
   "devDependencies": {
     "gh-pages-deploy": "^0.5.1",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "purecss": "^1.0.1"
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
