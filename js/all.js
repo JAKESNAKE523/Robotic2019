@@ -1,0 +1,1 @@
+function dostuff(){onsole.log("hello")}function otherush(){console.log("eafsdas")}function dostuff(){onsole.log("hello")}function otherush(){console.log("eafsdas")}dostuff(),otherush(),dostuff(),otherush();
