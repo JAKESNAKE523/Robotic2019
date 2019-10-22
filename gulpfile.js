@@ -42,4 +42,4 @@ gulp.task('run', function(done){
     gulp.watch(src + 'js/*.js', gulp.series('js'));
 });
 
-gulp.task('default', gulp.series('js', 'css'));
+gulp.task('default', gulp.series('run'));
