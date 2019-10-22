@@ -4,7 +4,13 @@
   "description": "A website for the 2019 BEST Robotics competition at the Little Rock Hub",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "html": "gulp html",
+    "css": "gulp css",
+    "js": "gulp js",
+    "build": "gulp build",
+    "start": "gulp",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +26,7 @@
   },
   "homepage": "https://github.com/JAKESNAKE523/Robotics2019#readme",
   "devDependencies": {
+    "gh-pages-deploy": "^0.5.1",
     "gulp": "^4.0.2"
   },
   "dependencies": {
@@ -27,12 +34,17 @@
     "fill-range": "^7.0.1",
     "gift": "^0.10.2",
     "gulp-concat": "^2.6.1",
-    "gulp-gh-pages": "^0.5.4",
     "gulp-minify-css": "^1.2.4",
     "gulp-uglify": "^3.0.2"
   },
   "resolutions": {
     "braces": "^2.3.1",
     "clean-css": "^4.1.11"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "build",
+    "prep": [
+      "gulp build"
+    ]
   }
 }
