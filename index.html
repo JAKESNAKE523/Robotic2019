@@ -5,11 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="stylesheet" href="css/index.css">
+    <script>
 
+        let dark = false;
+
+        function switchmode(){
+            if (dark){
+                dark = false;
+                document.documentElement.style.setProperty('--background-color', 'white')
+                setP('--text-color', "000000")
+            } else {
+                dark = true;
+                setP('--background-color', '#222831')
+                setP('--text-color', "white");
+            }
+        }
+
+        function setP(property, value){
+            document.documentElement.style.setProperty(property, value);
+        }
+    
+    </script>
     <title>Icebreakers | Robotics</title>
 </head>
 <body>
-    <nav class="navbar is-danger">
+    <nav class="navbar is-danger is-hidden">
         <div class="navbar-brand">
             <div class="navbar-item">
                 <span>Icebreakers</span>
@@ -34,5 +56,40 @@
             </div>
         </div>
     </nav>
+    <div class="section splash">
+        <button class="button is-transparent" onclick="switchmode()">C</button>
+        <div class="container">
+            <div class="box" id="title-box">
+                <h1 class="title has-text-centered has-text-weight-bold is-1">Icebreakers</span>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="card-header-title">About our Robot</h1>
+                        </div>
+                        <card-content>
+                            <div class="about-robot">
+                                <p class="box">The robot was designed with emergency situations in mind.  The snowstorm of 0000 caused electricity to go out across the state so many were without common living commodities.  Our robot aims to solve that problem by carrying out tasks that humans would not be able to do in cold, harsh conditions</p>
+                            </div>
+                        </card-content>
+                    </div>
+                </div>
+                <div class="column">
+
+                </div>
+                <div class="column">
+
+                </div>
+                <div class="column">
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
