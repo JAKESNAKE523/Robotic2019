@@ -1,0 +1,44 @@
+:root {
+    --background-color: white;
+    --background-secondary: white;
+    --box-color: var(--background-color);
+    --box-shadow: rgba(10,10,10,0.1);
+    --box-shadow-2: rgba(10,10,10,0.2);
+    --text-color: black;
+}
+.splash {
+    /*display: flex;
+    flex-direction: row;*/
+    background-color: var(--background-color);
+    width: 100%;
+    color: var(--text-color);
+    height: 92vh;
+    transition: 0.35s all;
+    position: fixed;
+}
+.placeholder {
+    height: 80vh;
+}
+#title-box {
+    transition: 0.35s background-color;
+    margin-top: 40px;
+    border-radius: 20px;
+    color: var(--text-color);
+    background-color: var(--box-color);
+    box-shadow: 0 0.5em 1em -0.125em var(--box-shadow), 0 0px 0 1px var(--box-shadow-2);
+}
+.title {
+    color: var(--text-color)
+}
+.button.is-transparent{
+    background: transparent;
+    border: 0;
+}
+
+.a-content-wrapper {
+    background-color: red;
+    width: 100%;
+    height: 200vh;
+    z-index: 99;
+    position: absolute;
+}
