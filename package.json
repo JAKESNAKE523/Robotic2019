@@ -28,6 +28,7 @@
   "devDependencies": {
     "gh-pages-deploy": "^0.5.1",
     "gulp": "^4.0.2",
+    "gulp-uglify-es": "^2.0.0",
     "purecss": "^1.0.1"
   },
   "dependencies": {
