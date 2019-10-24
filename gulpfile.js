@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
 const browserSync = require('browser-sync').create();
