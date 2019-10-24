@@ -8,43 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-
-        let dark = false;
-
-        $(document).ready(function (){
-            console.log("what");
-            var stickydock = $('#nav').offset();
-            var $window = $(window);
-            $window.scroll(function() {
-                if($window.scrollTop() >= stickydock.top){
-                    $('#nav').addClass('is-fixed-top');
-                } else {
-                    $('#nav').removeClass('is-fixed-top');
-                }
-            });
-        });
-
-        function switchmode(){
-            if (dark){
-                dark = false;
-                setP('--background-color', 'white')
-                setP('--box-color', "white")
-                setP('--text-color', "000000")
-            } else {
-                dark = true;
-                setP('--background-color', '#222831');
-                setP('--background-secondary', "#3B4048");
-                setP('--box-color', "#393e46");
-                setP('--text-color', "white");
-            }
-        }
-
-        function setP(property, value){
-            document.documentElement.style.setProperty(property, value);
-        }
-    
-    </script>
+    <script src="js/all.js"></script>
     <title>Icebreakers | Robotics</title>
 </head>
 <body>
@@ -92,7 +56,20 @@
                     <button class="button is-transparent dark-mode" onclick="switchmode()">C</button>
                 </div>
                 <div class="navbar-end">
-
+                    <div class="dropdown is-up" id="menu">
+                        <div class="dropdown-trigger">
+                            <button class="button" onclick="openDropdown()">
+                                <span>/\</span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <span>Eyy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
