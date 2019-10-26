@@ -42,6 +42,7 @@ gulp.task('run', function(done){
     gulp.watch(src + "*.html", gulp.series('html'));
     gulp.watch(src + 'css/*.css', gulp.series('css'));
     gulp.watch(src + 'js/*.js', gulp.series('js'));
+    gulp.watch(src + 'images/*', gulp.series('images'));
 });
 
 gulp.task('default', gulp.series('build', 'run'));
