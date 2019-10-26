@@ -18,14 +18,17 @@ function switchmode(){
     if (dark){
         dark = false;
         setP('--background-color', 'white')
+        setP('--background-secondary', "white");
         setP('--box-color', "white")
-        setP('--text-color', "000000")
+        setP('--text-color', "black")
+        setP('--background-image', "url('../img/city2.png')");
     } else {
         dark = true;
         setP('--background-color', '#222831');
         setP('--background-secondary', "#3B4048");
         setP('--box-color', "#393e46");
         setP('--text-color', "white");
+        setP('--background-image', "url('../img/city.png')");
     }
 }
 
