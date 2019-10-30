@@ -3,6 +3,7 @@ const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
 const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
 
 const src = './';
 const build = './build';
@@ -18,6 +19,11 @@ gulp.task('css', function(done) {
     done();
 });
 
+gulp.task('scss', function(done){
+    gulp.src(src + 'scss/*.scss').pipe(sass()).pipe(minifyCSS()).pipe(gulp.dest(build + '/css')).pipe(browserSync.stream());
+    done();
+});
+
 gulp.task('html', function(done){
     gulp.src(src + '*.html').pipe(gulp.dest(build));
     browserSync.reload();
@@ -30,7 +36,7 @@ gulp.task('images', function(done) {
     done();
 })
 
-gulp.task('build', gulp.series('html', 'css', 'js', 'images'));
+gulp.task('build', gulp.series('html', 'css', 'scss', 'js', 'images'));
 
 gulp.task('run', function(done){
     browserSync.init({
@@ -41,6 +47,7 @@ gulp.task('run', function(done){
 
     gulp.watch(src + "*.html", gulp.series('html'));
     gulp.watch(src + 'css/*.css', gulp.series('css'));
+    gulp.watch(src + 'scss/*.scss', gulp.series('scss'));
     gulp.watch(src + 'js/*.js', gulp.series('js'));
     gulp.watch(src + 'images/*', gulp.series('images'));
 });

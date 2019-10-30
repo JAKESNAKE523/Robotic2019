@@ -1,5 +1,6 @@
 
 let dark = false;
+let toggle = -1;
 
 $(document).ready(function (){
     console.log("what");
@@ -22,6 +23,9 @@ function switchmode(){
         setP('--box-color', "white")
         setP('--text-color', "black")
         setP('--background-image', "url('../img/city2.png')");
+        
+        $(".dark-mode-icon").removeClass('fa-sun');
+        $(".dark-mode-icon").addClass('fa-moon');
     } else {
         dark = true;
         setP('--background-color', '#222831');
@@ -29,6 +33,8 @@ function switchmode(){
         setP('--box-color', "#393e46");
         setP('--text-color', "white");
         setP('--background-image', "url('../img/city.png')");
+        $(".dark-mode-icon").removeClass('fa-moon');
+        $(".dark-mode-icon").addClass('fa-sun');
     }
 }
 
@@ -42,4 +48,14 @@ function openDropdown(){
     }else {
         $("#menu").addClass('is-active');
     }
+    
+    let dropmenu = $('#dropdownMenu');
+    if(toggle === 1){
+        console.log("1");
+        dropmenu.removeClass('clicked');
+    }else{
+        console.log("-1");
+        dropmenu.addClass('clicked');
+    }
+    toggle *= -1;
 }
