@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Icebreakers | About</title>
+    <link rel="stylesheet" href="css/aboutsite.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="js/all.js"></script>
+</head>
+<body>
+    <nav class="navbar is-fixed-top" id="nav">
+        <div class="navbar-brand is-hidden">
+            <a href="" class="navbar-item">Icebreakers LLC</a>
+        </div>
+        <div class="navbar-menu is-active">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <div class="dropdown is-down" id="menu">
+                        <div class="dropdown-trigger">
+                            <button class="button is-transparent" id="dropdownMenu" onclick="openDropdown()">
+                                <div class='line1'></div>
+                                <div class='line2'></div>
+                                <div class='line3'></div>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <a href='./'>Home</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="./team.html">Team</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href='./purchase.html'>Purchase</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href='./files/notebook.pdf' target="_blank">Notebook</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href='./research.html'>Research</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href='./aboutsite.html'>About the site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <button class="button is-transparent dark-mode" onclick="switchmode()">
+                        <span class="icon is-large">
+                            <i class="dark-mode-icon fas fa-moon fa-lg"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-placeholder">
+
+    </div>
+    <section class="section">
+        <span class="title is-size-2 is-size-3-mobile">About this website</span>
+        <header class="header is-size-3 is-size-4-mobile">Design Intentions</header>
+        <div class="content">
+            <p>The design of this website was chosen with our situation
+               in mind.  A dark mode was implemented as a convenience as well as a nod to the
+               power outage based game that the robot will compete in.  The website also is a
+               mobile-first design.  We focused on phones and mobile devices because most people
+               at competition will have their phone with them and will likely view the site that 
+               way.  This doesn't mean that the desktop site was neglected, just that we focused 
+               on our target audience.</p>
+        </div>
+        <header class="header is-size-3 is-size-4-mobile">Credit</header>
+        <div class="content">
+            <p>The website programming and design was done by Jake Williams.  Various members of the team were consulted for opinions on design.  The Icebreaker's logo on the main page of the website was done by Gentry Needham.  The image credit goes to all-free-download.com and we are using the image with proper credit to them.</p>
+        </div>
+        <header class="header is-size-3 is-size-4-mobile">Development</header>
+        <div class="content">
+            <p>The site was built using HTML5, CSS3, and Javascript.  Bulma CSS framework was used for its versatility and more effecient devlopment speed.  The site and its source is hosted on github.</p>
+            <a href="https://github.com/jakesnake523/robotics2019">
+                <span class="icon is-large">
+                    <i class="github fab fa-github fa-3x" style="color: white;">
+
+                    </i>
+                </span>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

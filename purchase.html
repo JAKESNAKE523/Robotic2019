@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/purchase.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <script src="./js/all.js"></script>
 </head>
 <body>
@@ -66,6 +67,7 @@
 
     </div>
     <section class="section">
+            <header class="title page-title">S.H.R.E.K.</header>
             <div class="tile is-ancestor is-vertical">
                     <div class="tile is-parent">
                       <article class="tile is-8 is-child">
@@ -73,14 +75,45 @@
                             <img src="https://bulma.io/images/placeholders/640x480.png" alt="">
                         </figure>
                       </article>
-                      <div class="tile is-child">
-                        <p class="title">Two</p>
+                      <div class="tile is-child box">
+                        <div class="title-containter" style="display: flex;">
+                            <span class="title" style="margin-top: 5px;">Purchase</span>
+                            <span class="tag is-success is-size-4" style="margin-left: auto;">$135.99</span>
+                        </div>
+                        <form action="">
+                            <div class="field">
+                                <label for="Amount" class="label">Amount</label>
+                                <div class="control" name="Amount">
+                                    <div class="select">
+                                        <select name="" id="" class="option">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <button class="button" disabled>
+                                    Sold Out
+                                </button>
+                            </div>
+                        </form>
                       </div>
                     </div>
                     <div class="tile is-parent">
-                      <article class="tile is-child">
-                        <div class="content">
+                      <article class="tile is-child box">
+                        <div class="bottom-title">
                             <p class="title">About the product</p>
+                        </div>
+                        <div class="content">
+                            <p>The Systematic Help Routine Electric Kit is designed to help restore power in emergency situations.  The robot can repair electric lines and restore power to entire neighborhoods in an effecient manner.  For the first edition of our robot, the supplies are limited.</p>
                         </div>
                       </article>
                     </div>
