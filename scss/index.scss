@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 $navbar-breakpoint:0;
+$family-primary: 'Quicksand';
 
 :root {
-    --background-color: white;
+    --background-color: #4E98BB;
     --background-secondary: white;
     --background-third: #FBFBFB;
-    --background-image: url('../img/2_city.jpg');
+    --background-image: url('../img/3_city_light.jpg');
     --box-color: white;
     --box-shadow: rgba(10,10,10,0.1);
     --box-shadow-2: rgba(10,10,10,0.2);
@@ -12,21 +14,25 @@ $navbar-breakpoint:0;
 }
 
 body, html {
+    font-family: 'Quicksand';
     color: var(--text-color) !important;
     background-color: var(--background-secondary) !important;
 }
 
 .splash {
     background-color: var(--background-color);
-    background-image: var(--background-image);
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center 110%;
+    background-image: url('../img/3_city_light.jpg');
+    background-size: 60%, 25%;
+    background-repeat: no-repeat, repeat;
+    background-position: center bottom,0;
     width: 100%;
     color: var(--text-color) !important;
-    height: 92vh;
+    height: 77.5vh;
     transition: 0.35s all;
     position: fixed;
+}
+.splash.dark {
+    background-image: url('../img/2_city.jpg'), url('../img/snowcircles.png');
 }
 .snow {
     z-index: 199;
@@ -62,6 +68,13 @@ body, html {
 }
 .navbar {
     width: 100%;
+}
+.nav-placeholder {
+    height: 0vh;
+//    display: none;
+}
+.nav-placeholder.is-shown {
+    height: 9vh;
 }
 .navbar-menu {
     transition: 0.35s all;
@@ -103,7 +116,7 @@ body, html {
     transition: transform 0.3s ease;
 }
 #section1,#section2,#section3,#section4{
-    height: 100vh;
+    height: 100%;
 }
 .sm>.button {
     margin-left: 4.5vw;
@@ -144,17 +157,19 @@ body, html {
         /*display: flex;
         flex-direction: row;*/
         background-color: var(--background-color);
-        background-image: var(--background-image);
-        background-size: 200%;
+        background-image: url('../img/3_city_light.jpg');
+        background-size: 200%, 85%;
         background-repeat: no-repeat, repeat;
-        background-position: center -20%;
+        background-position: bottom center,top left;
         width: 100%;
         color: var(--text-color) !important;
-        height: 92vh;
+        height: 77.5vh;
         transition: 0.35s all;
         position: fixed;
     }
-    
+    .splash.dark {
+        background-image: url('../img/2_city.jpg'), url('../img/snowcircles.png');
+    }
 }
 .navbar {
     display: flex;

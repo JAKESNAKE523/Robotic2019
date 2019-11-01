@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <title>Icebreakers | Robotics</title>
     
 </head>
 <body>
     <div class="section splash is-centered">
-        <div class="container is-centered">
-            <div class="box is-centered" id="title-box">
-                <h1 class="title has-text-centered has-text-weight-bold is-1 is-centered">Icebreakers</span>
-            </div>
+        <div class="container is-centered has-text-centered">
+                <img src="./img/ice_breakers_white.png" alt="An image of the icebreakers logo" height="300" width="300">
         </div>
     </div>
     <script src="js/all.js"></script>
@@ -31,16 +30,7 @@
             <div class="navbar-menu is-active">
                 <div class="navbar-start">
                     <div class="navbar-item">
-                        <button class="button is-transparent dark-mode" onclick="switchmode()">
-                            <span class="icon is-large">
-                                <i class="dark-mode-icon fas fa-moon fa-lg"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="dropdown is-down" id="menu">
+                        <div class="dropdown is-up" id="menu">
                             <div class="dropdown-trigger">
                                 <button class="button is-transparent" id="dropdownMenu" onclick="openDropdown()">
                                     <div class='line1'></div>
@@ -59,24 +49,107 @@
                                     <div class="dropdown-item">
                                         <a href='./purchase.html'>Purchase</a>
                                     </div>
+                                    <div class="dropdown-item">
+                                        <a href='./files/notebook.pdf' target="_blank">Notebook</a>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href='./research.html'>Research</a>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href='./aboutsite.html'>About the site</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-        <div class="main-content">
-            <div class="section" id="section1">
-                <div class="container">
-                    
+                
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <button class="button is-transparent dark-mode" onclick="switchmode()">
+                            <span class="icon is-large">
+                                <i class="dark-mode-icon fas fa-moon fa-lg"></i>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="section" id="section2">
+        </nav>
+        <div class="nav-placeholder">
+
+        </div>
+        <div class="main-content">
+            <div class="section mission-statement" id="section1" style="display: flex; align-items: center;">
+                <div class="container has-text-centered">
+                    <h1 class="is-size-1 is-size-3-mobile has-text-weight-bold">Our Mission</h1>
+                    <article class="message is-info has-text-centered" style="margin-top: 25px">
+                        <div class="message-header has-text-centered is-hidden">
+                            <h1 class="has-text-centered">Mission Statement</h1>
+                        </div>
+                        <div class="message-body">
+                            <p class="statement is-italic has-text-centered is-size-2 is-size-4-mobile">
+                                    "Our goal is to provide effiecent and quality emergency repair as quick as possible. We understand that it is priority to have working electricity to continue daily life as we know it."
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="section" id="section3"></div>
-            <div class="section" id="section4">
-                
+            <div class="section product-tile" id="section2">
+                <div class="container has-text-centered">
+                    <h1 class="is-size-1 is-size-3-mobile has-text-weight-bold">Our Product</h1>
+                    <div class="card">
+                        <div class="card-imaget">
+                            <figure class="image is4by3">
+                                <img src="" alt="" class="robot">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                Our first production robot, ready for limited use by electrical companies.
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                                <button class="button card-footer-item is-link is-light has-text-weight-bold is-size-6" style='padding-bottom: 40px;'>Share</button>
+                            <button class="button card-footer-item is-link is-light has-text-weight-bold is-size-6" style='padding-bottom: 40px;'>More info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section reasearch-notebook-team" id="section3">
+                <div class="container has-text-centered">
+                    <h1 class="is-size-1 is-size-3-mobile has-text-weight-bold" style="padding-bottom: 15px;">Other Resources</h1>
+                    <div class="level is-mobile">
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <span class="icon is-large">
+                                    <i class="fa-3x fas fa-pencil-alt"></i>
+                                </span>
+                                <p class="heading">Research</p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <span class="icon is-large">
+                                        <i class="fa-3x fas fa-users"></i>
+                                </span>
+                                <p class="heading">Team</p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <span class="icon is-large">
+                                        <i class="fa-3x fas fa-book"></i>
+                                </span>
+                                <p class="heading">Notebook</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section contact-team" id="section4">
+                <div class="container has-text-centered">
+                        <h1 class="is-size-1 is-size-3-mobile has-text-weight-bold">Contact Us</h1>
+                </div>
             </div>
             <div class="footer">
                 <div class="columns is-centered">
