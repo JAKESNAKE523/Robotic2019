@@ -2,8 +2,19 @@
 let dark = false;
 let toggle = -1;
 
+let mode = getCookie("mode");
+
+if(mode==='dark'){
+    setDark();
+} else if(mode==='light'){
+    setLight();
+} else {
+    document.cookie = "mode=light; path=/"; 
+}
+
 $(document).ready(function (){
-    console.log("what");
+
+
     var stickydock = $('#nav').offset();
     var $window = $(window);
     $window.scroll(function() {
@@ -20,36 +31,59 @@ $(document).ready(function (){
         }
     });
 });
+function setLight(){
+    dark = false;
+    document.cookie = "mode=light; path=/"; 
+    setP('--background-color', '#4E98BB')
+    setP('--background-secondary', "white");
+    setP('--background-third', "#FBFBFB");
+    setP('--box-color', "white")
+    setP('--text-color', "black")
+    setP('--background-image', "url('../img/3_city_light.jpg')");
+    $('.splash').removeClass('dark');
+    $(".dark-mode-icon").removeClass('fa-sun');
+    $(".dark-mode-icon").addClass('fa-moon');
+}
+function setDark(){
+    dark = true;
+    document.cookie = "mode=dark; path=/"; 
+    /*setP('--background-color', '#222831');
+    setP('--background-secondary', "#3B4048");
+    setP('--background-third', "#393e45");
+    setP('--box-color', "#393e46");
+    primary:#073652
+    */
+    $('.splash').addClass('dark');
+    setP('--background-color', '#053853');
+    setP('--background-secondary', "#084466");
+    setP('--background-third', "#0b4769");
+    setP('--box-color', "#09476b");
+    setP('--text-color', "white");
+    setP('--background-image', "url('../img/2_city.jpg'),url('../img/snowcircles.png')");
+    $(".dark-mode-icon").removeClass('fa-moon');
+    $(".dark-mode-icon").addClass('fa-sun');
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
 
 function switchmode(){
     if (dark){
-        dark = false;
-        setP('--background-color', '#4E98BB')
-        setP('--background-secondary', "white");
-        setP('--background-third', "#FBFBFB");
-        setP('--box-color', "white")
-        setP('--text-color', "black")
-        setP('--background-image', "url('../img/3_city_light.jpg')");
-        $('.splash').removeClass('dark');
-        $(".dark-mode-icon").removeClass('fa-sun');
-        $(".dark-mode-icon").addClass('fa-moon');
+        setLight();
     } else {
-        dark = true;
-        /*setP('--background-color', '#222831');
-        setP('--background-secondary', "#3B4048");
-        setP('--background-third', "#393e45");
-        setP('--box-color', "#393e46");
-        primary:#073652
-        */
-       $('.splash').addClass('dark');
-        setP('--background-color', '#053853');
-        setP('--background-secondary', "#084466");
-        setP('--background-third', "#0b4769");
-        setP('--box-color', "#09476b");
-        setP('--text-color', "white");
-        setP('--background-image', "url('../img/2_city.jpg'),url('../img/snowcircles.png')");
-        $(".dark-mode-icon").removeClass('fa-moon');
-        $(".dark-mode-icon").addClass('fa-sun');
+        setDark();
     }
 }
 
