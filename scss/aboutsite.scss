@@ -1,0 +1,133 @@
+//@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+$navbar-breakpoint:0;
+$family-primary: 'Quicksand';
+
+:root {
+    --background-color: #4E98BB;
+    --background-secondary: white;
+    --background-third: #FBFBFB;
+    --background-image: url('../img/3_city_light.jpg');
+    --box-color: white;
+    --box-shadow: rgba(10,10,10,0.1);
+    --box-shadow-2: rgba(10,10,10,0.2);
+    --text-color: black;
+}
+
+body, html {
+    font-family: 'Quicksand';
+    color: var(--text-color) !important;
+    background-color: var(--background-secondary) !important;
+    transition: 0.35s all;
+}
+
+.button.is-transparent{
+    background: transparent;
+    border: 0;
+}
+
+.a-content-wrapper {
+    background-color: var(--background-secondary);
+    width: 100%;
+    z-index: 99;
+    position: relative;
+    margin: 0;
+    overflow: none;
+    transition: 0.35s all;
+}
+.navbar {
+    width: 100%;
+    background-color: var(--background-color) !important;
+}
+.nav-placeholder {
+    height: 9vh;
+}
+.navbar-menu {
+    transition: 0.35s all;
+    box-shadow: 0 0.5em 1em -0.125em var(--box-shadow)/*, 0 0px 0 1px var(--box-shadow-2)*/;
+    background-color: var(--background-color) !important;
+}
+#dropdownMenu {
+    display: flex;
+    flex-direction: column;
+}
+.line1 {
+    margin-top: 4px;
+}
+
+.line1,
+.line2,
+.line3 {
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+    height: 3px;
+    width: 30px;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease;
+    transition: 0.45s background-color;
+}
+
+#dropdownMenu.clicked > .line1 {
+    transform: translateY(9px);
+    transition: transform 0.3s ease;
+}
+
+#dropdownMenu.clicked > .line3 {
+    transform: translateY(-11px);
+    transition: transform 0.3s ease;
+}
+.title {
+    color: var(--text-color) !important;
+    transition: 0.35s all;
+}
+#section1,#section2,#section3,#section4{
+    height: 100%;
+}
+.sm>.button {
+    margin-left: 4.5vw;
+    margin-right: 4.5vw;
+    border: 0;
+    width: 11vw;
+    height: 11vw;
+    color: var(--text-color) !important;
+}
+.sm>a.span {
+    width: 100px;
+    height: 100px;
+
+}
+.github {
+    color: var(--text-color) !important;
+    transition: 0.45s all;
+}
+.button{
+    color: var(--text-color) !important;
+    transition: 0.45s background-color;
+}
+.button:focus, button:active {
+    color: var(--text-color) !important;
+}
+@media screen and (max-width: 1023px){
+    .navbar-menu {
+        transition: 0.35s all;
+        background-color:var(--background-color);
+        box-shadow: 0 8px 16px rgba(10,10,10,.1);
+        padding: .5rem 0;
+    }
+   
+}
+.navbar {
+    display: flex;
+}
+.navbar-item {
+    display: flex;
+    align-items: center;
+}
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/form/all.sass";

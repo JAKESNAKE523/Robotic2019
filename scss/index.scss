@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 $navbar-breakpoint:0;
 $family-primary: 'Quicksand';
 
@@ -117,6 +117,12 @@ body, html {
 }
 #section1,#section2,#section3,#section4{
     height: 100%;
+}
+.card-footer-item.button {
+    color: black !important;
+}
+.level-link {
+    color: var(--text-color);
 }
 .sm>.button {
     margin-left: 4.5vw;

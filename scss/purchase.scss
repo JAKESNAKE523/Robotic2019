@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 $navbar-breakpoint:0;
 $family-primary: 'Quicksand';
 
@@ -17,21 +17,23 @@ body, html {
     font-family: 'Quicksand';
     color: var(--text-color) !important;
     background-color: var(--background-secondary) !important;
+    transition: 0.35s all;
 }
-
+.title.page-title {
+    color: var(--text-color) !important;
+}
 .button.is-transparent{
     background: transparent;
     border: 0;
 }
-
 .a-content-wrapper {
-    transition: 0.35s background-color;
     background-color: var(--background-secondary);
     width: 100%;
     z-index: 99;
     position: relative;
     margin: 0;
     overflow: none;
+    transition: 0.35s background-color;
 }
 .navbar {
     width: 100%;
@@ -41,9 +43,9 @@ body, html {
     height: 9vh;
 }
 .navbar-menu {
-    transition: 0.35s all;
     box-shadow: 0 0.5em 1em -0.125em var(--box-shadow)/*, 0 0px 0 1px var(--box-shadow-2)*/;
     background-color: var(--background-color) !important;
+    transition: 0.35s all;
 }
 #dropdownMenu {
     display: flex;
@@ -79,21 +81,10 @@ body, html {
 #section1,#section2,#section3,#section4{
     height: 100%;
 }
-.sm>.button {
-    margin-left: 4.5vw;
-    margin-right: 4.5vw;
-    border: 0;
-    width: 11vw;
-    height: 11vw;
-    color: var(--text-color) !important;
-}
-.sm>a.span {
-    width: 100px;
-    height: 100px;
-
+.button.dark-mode {
+    color: var(--text-color);
 }
 .button{
-    color: var(--text-color) !important;
     transition: 0.45s background-color;
 }
 .button:focus, button:active {

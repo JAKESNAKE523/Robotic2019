@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 $navbar-breakpoint:0;
 $family-primary: 'Quicksand';
 
@@ -12,11 +12,11 @@ $family-primary: 'Quicksand';
     --box-shadow-2: rgba(10,10,10,0.2);
     --text-color: black;
 }
-
 body, html {
     font-family: 'Quicksand';
     color: var(--text-color) !important;
     background-color: var(--background-secondary) !important;
+    transition: 0.35s all;
 }
 
 .button.is-transparent{
