@@ -6,7 +6,7 @@ $family-primary: 'Quicksand';
     --background-color: #4E98BB;
     --background-secondary: white;
     --background-third: #FBFBFB;
-    --background-image: url('../img/3_city_light.jpg');
+    --background-image: url('../img/3_city_light_final.jpg');
     --box-color: white;
     --box-shadow: rgba(10,10,10,0.1);
     --box-shadow-2: rgba(10,10,10,0.2);
@@ -21,7 +21,7 @@ body, html {
 
 .splash {
     background-color: var(--background-color);
-    background-image: url('../img/3_city_light.jpg');
+    background-image: url('../img/3_city_light_final.png');
     background-size: 60%, 25%;
     background-repeat: no-repeat, repeat;
     background-position: center bottom,0;
@@ -32,7 +32,7 @@ body, html {
     position: fixed;
 }
 .splash.dark {
-    background-image: url('../img/2_city.jpg'), url('../img/snowcircles.png');
+    background-image: url('../img/2_city_final.png'), url('../img/snowcircles.png');
 }
 .snow {
     z-index: 199;
@@ -163,7 +163,7 @@ body, html {
         /*display: flex;
         flex-direction: row;*/
         background-color: var(--background-color);
-        background-image: url('../img/3_city_light.jpg');
+        background-image: url('../img/3_city_light_final.png');
         background-size: 200%, 85%;
         background-repeat: no-repeat, repeat;
         background-position: bottom center,top left;
@@ -174,7 +174,7 @@ body, html {
         position: fixed;
     }
     .splash.dark {
-        background-image: url('../img/2_city.jpg'), url('../img/snowcircles.png');
+        background-image: url('../img/2_city_final.png'), url('../img/snowcircles.png');
     }
 }
 .navbar {
