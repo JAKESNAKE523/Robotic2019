@@ -4,6 +4,8 @@ let toggle = -1;
 
 let mode = getCookie("mode");
 
+let doImove = false;
+
 if(mode==='dark'){
     setDark();
 } else if(mode==='light'){
@@ -14,20 +16,25 @@ if(mode==='dark'){
 
 $(document).ready(function (){
 
-
     var stickydock = $('#nav').offset();
     var $window = $(window);
+
+    //Determines if the navbar should be watched annd moved throughout the page.  Removes the jumpy behavior exhibited on some pages
+    doImove = !($('nav').hasClass('is-fixed-top'));
+
     $window.scroll(function() {
-        if($window.scrollTop() >= stickydock.top){
-            $('#nav').addClass('is-fixed-top');
-            $('.nav-placeholder').addClass('is-shown');
-            $(".navbar-menu").addClass('navbar-dark');
-            $(".dropdown").removeClass('is-up')
-        } else {
-            $('#nav').removeClass('is-fixed-top');
-            $('.nav-placeholder').removeClass('is-shown');
-            $(".navbar-menu").removeClass('navbar-dark');
-            $(".dropdown").addClass('is-up')
+        if(doImove){
+            if($window.scrollTop() >= stickydock.top){
+                $('#nav').addClass('is-fixed-top');
+                $('.nav-placeholder').addClass('is-shown');
+                $(".navbar-menu").addClass('navbar-dark');
+                $(".dropdown").removeClass('is-up')
+            } else{//Watch this
+                $('#nav').removeClass('is-fixed-top');
+                $('.nav-placeholder').removeClass('is-shown');
+                $(".navbar-menu").removeClass('navbar-dark');
+                $(".dropdown").addClass('is-up')
+            }
         }
     });
 });

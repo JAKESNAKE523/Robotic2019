@@ -4,6 +4,7 @@ const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
 
 const src = './';
 const build = './build';
@@ -31,12 +32,21 @@ gulp.task('html', function(done){
 });
 
 gulp.task('images', function(done) {
-    gulp.src(src + 'images/*').pipe(gulp.dest(build + "/img"));
+    gulp.src(src + 'images/*').pipe(imagemin()).pipe(gulp.dest(build + "/img"));
     browserSync.reload();
     done();
-})
+});
 
-gulp.task('build', gulp.series('html', 'css', 'scss', 'js', 'images'));
+gulp.task('files', function (done) {
+    gulp.src(src + 'files/*').pipe(gulp.dest(build + '/files'));
+    done();
+});
+
+gulp.task('clean', function (done) {
+
+});
+
+gulp.task('build', gulp.series('html', 'css', 'scss', 'js', 'images', 'files'));
 
 gulp.task('run', function(done){
     browserSync.init({
@@ -50,6 +60,7 @@ gulp.task('run', function(done){
     gulp.watch(src + 'scss/*.scss', gulp.series('scss'));
     gulp.watch(src + 'js/*.js', gulp.series('js'));
     gulp.watch(src + 'images/*', gulp.series('images'));
+    gulp.watch(src + 'files/*', gulp.series('files'));
 });
 
 gulp.task('default', gulp.series('build', 'run'));
