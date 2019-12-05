@@ -14,6 +14,21 @@ if(mode==='dark'){
     document.cookie = "mode=light; path=/"; 
 }
 
+$('#share').click(function () {
+    if(navigator.share){
+        navigator.share({
+            title: "Take a look at the Icebreaker's Robotics Website!",
+            url: "icebreakers.ga"
+        }).then(() => {
+            console.log('Share success').catch((error) => {
+                console.log('error sharing...');
+            });
+        });
+    } else{
+        
+    }
+})
+
 $(document).ready(function (){
 
     var stickydock = $('#nav').offset();
@@ -46,7 +61,7 @@ function setLight(){
     setP('--background-third', "#FBFBFB");
     setP('--box-color', "white")
     setP('--text-color', "black")
-    setP('--background-image', "url('../img/3_city_light.jpg')");
+    setP('--background-image', "url('../img/3_city_light_final.png')");
     $('.splash').removeClass('dark');
     $(".dark-mode-icon").removeClass('fa-sun');
     $(".dark-mode-icon").addClass('fa-moon');
@@ -66,7 +81,7 @@ function setDark(){
     setP('--background-third', "#0b4769");
     setP('--box-color', "#09476b");
     setP('--text-color', "white");
-    setP('--background-image', "url('../img/2_city.jpg'),url('../img/snowcircles.png')");
+    setP('--background-image', "url('../img/2_city_final_new.png'),url('../img/snowcircles.png')");
     $(".dark-mode-icon").removeClass('fa-moon');
     $(".dark-mode-icon").addClass('fa-sun');
 }

@@ -1,4 +1,4 @@
-//@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 $navbar-breakpoint:0;
 $family-primary: 'Quicksand';
 
@@ -6,7 +6,7 @@ $family-primary: 'Quicksand';
     --background-color: #4E98BB;
     --background-secondary: white;
     --background-third: #FBFBFB;
-    --background-image: url('../img/3_city_light_final.jpg');
+    --background-image: url('../img/3_city_light_final.png');
     --box-color: white;
     --box-shadow: rgba(10,10,10,0.1);
     --box-shadow-2: rgba(10,10,10,0.2);
@@ -21,10 +21,10 @@ body, html {
 
 .splash {
     background-color: var(--background-color);
-    background-image: url('../img/3_city_light_final.png');
+    background-image: url('../img/3_city_light_final.png'),  url('./img/placeholder.png');
     background-size: 60%, 25%;
     background-repeat: no-repeat, repeat;
-    background-position: center bottom,0;
+    background-position: center bottom;
     width: 100%;
     color: var(--text-color) !important;
     height: 77.5vh;
@@ -32,7 +32,9 @@ body, html {
     position: fixed;
 }
 .splash.dark {
-    background-image: url('../img/2_city_final.png'), url('../img/snowcircles.png');
+    background-repeat: no-repeat, repeat;
+    background-image: url('../img/2_city_final_new.png'), url('../img/snowcircles.png');
+    transition: 0.35s all;
 }
 .snow {
     z-index: 199;
@@ -174,6 +176,7 @@ body, html {
         position: fixed;
     }
     .splash.dark {
+        transition: 0.35s all;
         background-image: url('../img/2_city_final.png'), url('../img/snowcircles.png');
     }
 }
