@@ -13,22 +13,20 @@ if(mode==='dark'){
 } else {
     document.cookie = "mode=light; path=/"; 
 }
-
-$('#share').click(function () {
-    if(navigator.share){
-        navigator.share({
-            title: "Take a look at the Icebreaker's Robotics Website!",
-            url: "icebreakers.ga"
-        }).then(() => {
-            console.log('Share success').catch((error) => {
-                console.log('error sharing...');
-            });
-        });
-    } else{
-        
+document.querySelector('#Sharek').addEventListener('click', function() {
+    if(navigator.canShare) {
+      navigator.share({
+        title: 'mobiForge: Web Share API',
+        text: 'Check out this great article about the Web Share API',
+        url: 'https://mobiforge.com/design-development/web-share-api'
+      })
+      .then(() => console.log('Share complete'))
+      .error((error) => console.error('Could not share at this time', error));
     }
-})
-
+  });
+function share(){
+    navigator.share({title:'ad'});
+}
 $(document).ready(function (){
 
     var stickydock = $('#nav').offset();
@@ -43,12 +41,12 @@ $(document).ready(function (){
                 $('#nav').addClass('is-fixed-top');
                 $('.nav-placeholder').addClass('is-shown');
                 $(".navbar-menu").addClass('navbar-dark');
-                $(".dropdown").removeClass('is-up')
+                $(".dropdown").removeClass('is-up');
             } else{//Watch this
                 $('#nav').removeClass('is-fixed-top');
                 $('.nav-placeholder').removeClass('is-shown');
                 $(".navbar-menu").removeClass('navbar-dark');
-                $(".dropdown").addClass('is-up')
+                $(".dropdown").addClass('is-up');
             }
         }
     });
@@ -56,11 +54,11 @@ $(document).ready(function (){
 function setLight(){
     dark = false;
     document.cookie = "mode=light; path=/"; 
-    setP('--background-color', '#4E98BB')
+    setP('--background-color', '#4E98BB');
     setP('--background-secondary', "white");
     setP('--background-third', "#FBFBFB");
-    setP('--box-color', "white")
-    setP('--text-color', "black")
+    setP('--box-color', "white");
+    setP('--text-color', "black");
     setP('--background-image', "url('../img/3_city_light_final.png')");
     $('.splash').removeClass('dark');
     $(".dark-mode-icon").removeClass('fa-sun');
